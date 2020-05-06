@@ -1,7 +1,7 @@
-#Proyecto 2
-##Diseño de Videojuegos
-##Universidad del Valle de Guatemala
+Proyecto 2
+Diseño de Videojuegos
+Universidad del Valle de Guatemala
 
-#Autores:
+Autores:
 Andrea Elías
 Diego Estrada
