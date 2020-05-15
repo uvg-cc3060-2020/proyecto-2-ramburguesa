@@ -135,9 +135,9 @@ GameObject:
   - component: {fileID: 125565099}
   - component: {fileID: 125565098}
   - component: {fileID: 125565103}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -227,7 +227,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125565097}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.395, y: 0.34, z: 0}
+  m_LocalPosition: {x: 0.395, y: 0.53, z: 0}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children:
   - {fileID: 1589920462}
@@ -247,7 +247,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a48c9b063cd525749b97b91c3a34afdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0
+  Speed: 4
+  rb: {fileID: 125565098}
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  jumpforce: 7
+  col: {fileID: 125565099}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +435,7 @@ Transform:
   m_GameObject: {fileID: 734554116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5543, y: 2.5543, z: 5.938748}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -446,7 +452,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -542,7 +548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1319346071}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -576,7 +582,7 @@ GameObject:
   - component: {fileID: 1589920465}
   - component: {fileID: 1589920464}
   - component: {fileID: 1589920463}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
