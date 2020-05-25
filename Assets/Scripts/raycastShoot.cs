@@ -44,7 +44,7 @@ public class raycastShoot : MonoBehaviour
 
     private void FireRun()
     {
-        Debug.DrawRay(face.position, face.forward * 100, Color.red, 0.5f);
+        Debug.DrawRay(face.position, face.forward * 100, Color.red, 1f);
 
         Ray ray = new Ray(face.position, face.forward);
         RaycastHit hitinfo;
@@ -58,7 +58,8 @@ public class raycastShoot : MonoBehaviour
                 health.TakeDamage(damage);
 
             }
-        }
+
+        } 
     }
 
    
