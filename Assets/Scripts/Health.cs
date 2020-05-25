@@ -4,30 +4,26 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField]
-    private int startingHealth = 5;
-    private int currentHealth;
+	[SerializeField]
+	private int startingHealth = 5;
 
-    // Start is called before the first frame update
-    private void onEnable()
-    {
-        currentHealth = startingHealth;
-    }
+	private int currentHealth;
 
-    // Update is called once per frame
-    public void TakeDamage(int damageAmount)
-    {
-        currentHealth -= damageAmount;
-        if(currentHealth <= 0)
-        {
-            Die();
-        }
+	private void OnEnable()
+	{
+		currentHealth = startingHealth;
+	}
 
-        
-    }
+	public void TakeDamage(int damageAmount)
+	{
+		currentHealth -= damageAmount;
 
-    private void Die()
-    {
-        gameObject.SetActive(false);
-    }
+		if (currentHealth <= 0)
+			Die();
+	}
+
+	private void Die()
+	{
+		gameObject.SetActive(false);
+	}
 }

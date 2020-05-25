@@ -10,21 +10,28 @@ public class raycastShoot : MonoBehaviour
 {
 
     [SerializeField]
-    [Range(0.5f, 1.5f)]
-    private float fireRamge = 1;
+    [Range(0.5f, 3f)]
+    private float fireRamge = 1f;
 
     [SerializeField]
     [Range(1f, 10f)]
     private int damage = 1;
 
-    private float timer;
+  
 
     [SerializeField]
 
     private Transform face;
 
 
+    [SerializeField]
+    private ParticleSystem muzzleParticle;
 
+    [SerializeField]
+    private AudioSource gunSound;
+
+
+    private float timer;
 
     // Update is called once per frame
     void Update()
@@ -46,6 +53,8 @@ public class raycastShoot : MonoBehaviour
     {
         Debug.DrawRay(face.position, face.forward * 100, Color.red, 1f);
 
+        muzzleParticle.Play();
+        gunSound.Play();
         Ray ray = new Ray(face.position, face.forward);
         RaycastHit hitinfo;
         
